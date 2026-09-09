@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Packages - Chalo Chale Travel App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <i class="fas fa-plane"></i> Chalo Chale
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="packages.html">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 mt-2 mt-lg-0">
+              <button
+                class="btn btn-auth btn-login"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-auth btn-register"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Travel Packages</h1>
+            <p>Choose from our carefully curated travel packages for the perfect vacation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="container py-5" id="packages">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Our Packages</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button class="filter-btn active" data-type="all">All Packages</button>
+          <button class="filter-btn" data-type="budget">Budget</button>
+          <button class="filter-btn" data-type="standard">Standard</button>
+          <button class="filter-btn" data-type="premium">Premium</button>
+          <button class="filter-btn" data-type="luxury">Luxury</button>
+          <button class="filter-btn" data-type="family">Family</button>
+          <button class="filter-btn" data-type="honeymoon">Honeymoon</button>
+        </div>
+      </div>
+
+      <!-- Package Cards -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Goa Beach Package -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="budget">
+            <span class="package-badge">Budget</span>
+            <img src="/images/lake.jpg" class="card-img-top" alt="Goa Beach Package">
+            <div class="card-body">
+              <h5 class="card-title">Goa Beach Escape</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 3 Days / 2 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Beachside Accommodation</li>
+                <li><i class="fas fa-check"></i> Daily Breakfast</li>
+                <li><i class="fas fa-check"></i> Airport Transfers</li>
+                <li><i class="fas fa-check"></i> Sightseeing Tour</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹12,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹15,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kerala Backwaters -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="standard">
+            <span class="package-badge">Standard</span>
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Kerala Backwaters">
+            <div class="card-body">
+              <h5 class="card-title">Kerala Backwaters</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 4 Days / 3 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Houseboat Stay</li>
+                <li><i class="fas fa-check"></i> All Meals Included</li>
+                <li><i class="fas fa-check"></i> Private Guide</li>
+                <li><i class="fas fa-check"></i> Tea Plantation Visit</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹24,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹28,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rajasthan Royal Tour -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="premium">
+            <span class="package-badge">Premium</span>
+            <img src="/images/lake.jpg" class="card-img-top" alt="Rajasthan Royal Tour">
+            <div class="card-body">
+              <h5 class="card-title">Rajasthan Royal Tour</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 6 Days / 5 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Heritage Hotel Stay</li>
+                <li><i class="fas fa-check"></i> All Meals Included</li>
+                <li><i class="fas fa-check"></i> Private Car with Driver</li>
+                <li><i class="fas fa-check"></i> Cultural Shows</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹45,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹52,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Himalayan Adventure -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="adventure">
+            <span class="package-badge">Adventure</span>
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Himalayan Adventure">
+            <div class="card-body">
+              <h5 class="card-title">Himalayan Adventure</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 5 Days / 4 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Mountain Camping</li>
+                <li><i class="fas fa-check"></i> Trekking Equipment</li>
+                <li><i class="fas fa-check"></i> Professional Guide</li>
+                <li><i class="fas fa-check"></i> Adventure Activities</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹32,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹38,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Fun Package -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="family">
+            <span class="package-badge">Family</span>
+            <img src="/images/lake.jpg" class="card-img-top" alt="Family Fun Package">
+            <div class="card-body">
+              <h5 class="card-title">Family Fun Package</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 4 Days / 3 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Family Suite</li>
+                <li><i class="fas fa-check"></i> Kid-friendly Activities</li>
+                <li><i class="fas fa-check"></i> All Meals Included</li>
+                <li><i class="fas fa-check"></i> Theme Park Tickets</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹28,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹32,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Honeymoon Special -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="honeymoon">
+            <span class="package-badge">Honeymoon</span>
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Honeymoon Special">
+            <div class="card-body">
+              <h5 class="card-title">Honeymoon Special</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 5 Days / 4 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Romantic Villa Stay</li>
+                <li><i class="fas fa-check"></i> Candlelight Dinner</li>
+                <li><i class="fas fa-check"></i> Couple Spa Treatment</li>
+                <li><i class="fas fa-check"></i> Private Beach Access</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹55,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹62,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Luxury India Tour -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="luxury">
+            <span class="package-badge">Luxury</span>
+            <img src="/images/lake.jpg" class="card-img-top" alt="Luxury India Tour">
+            <div class="card-body">
+              <h5 class="card-title">Luxury India Tour</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 10 Days / 9 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> 5-Star Hotels</li>
+                <li><i class="fas fa-check"></i> Private Jet Transfers</li>
+                <i class="fas fa-check"></i> Personal Butler
+                <li><i class="fas fa-check"></i> Exclusive Experiences</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹2,50,000</span>
+                  <span class="text-muted text-decoration-line-through small">₹2,80,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wildlife Safari -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="adventure">
+            <span class="package-badge">Adventure</span>
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Wildlife Safari">
+            <div class="card-body">
+              <h5 class="card-title">Wildlife Safari</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 4 Days / 3 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Jungle Resort Stay</li>
+                <li><i class="fas fa-check"></i> Safari Tours</li>
+                <li><i class="fas fa-check"></i> Naturalist Guide</li>
+                <li><i class="fas fa-check"></i> Wildlife Photography</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹22,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹26,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spiritual Journey -->
+        <div class="col">
+          <div class="card package-card h-100" data-type="standard">
+            <span class="package-badge">Standard</span>
+            <img src="/images/lake.jpg" class="card-img-top" alt="Spiritual Journey">
+            <div class="card-body">
+              <h5 class="card-title">Spiritual Journey</h5>
+              <p class="card-text text-muted"><i class="fas fa-clock"></i> 7 Days / 6 Nights</p>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Temple Stays</li>
+                <li><i class="fas fa-check"></i> Spiritual Guide</li>
+                <li><i class="fas fa-check"></i> Meditation Sessions</li>
+                <li><i class="fas fa-check"></i> Holy Site Visits</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                  <span class="price">₹35,999</span>
+                  <span class="text-muted text-decoration-line-through small">₹40,000</span>
+                </div>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose Our Packages?</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="text-center">
+            <div class="mb-3">
+              <i class="fas fa-tags fa-3x text-primary"></i>
+            </div>
+            <h5>Best Prices</h5>
+            <p class="text-muted">Competitive pricing with no hidden charges</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-center">
+            <div class="mb-3">
+              <i class="fas fa-shield-alt fa-3x text-success"></i>
+            </div>
+            <h5>Safe & Secure</h5>
+            <p class="text-muted">Verified hotels and trusted service providers</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-center">
+            <div class="mb-3">
+              <i class="fas fa-headset fa-3x text-info"></i>
+            </div>
+            <h5>24/7 Support</h5>
+            <p class="text-muted">Round-the-clock assistance for travelers</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-center">
+            <div class="mb-3">
+              <i class="fas fa-undo fa-3x text-warning"></i>
+            </div>
+            <h5>Easy Cancellation</h5>
+            <p class="text-muted">Flexible cancellation policies</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="loginModalLabel">
+              <i class="fas fa-sign-in-alt"></i> Login to Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Login</button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Don't have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Register here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="registerModalLabel">
+              <i class="fas fa-user-plus"></i> Create Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerFirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="registerFirstName" placeholder="Enter first name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="registerLastName" placeholder="Enter last name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="registerPhone" placeholder="Enter your phone number" required />
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Create password" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agreeTerms" required />
+                <label class="form-check-label" for="agreeTerms">
+                  I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Create Account</button>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Already have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Login here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="bookingModalLabel">
+              <i class="fas fa-calendar-check"></i> Book Your Package
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="bookingName" placeholder="Enter your full name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="bookingEmail" placeholder="Enter your email" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingPackage" class="form-label">Package</label>
+                    <input class="form-control" list="packageOptions" id="bookingPackage" placeholder="Select package" required />
+                    <datalist id="packageOptions">
+                      <option value="Goa Beach Escape"></option>
+                      <option value="Kerala Backwaters"></option>
+                      <option value="Rajasthan Royal Tour"></option>
+                      <option value="Himalayan Adventure"></option>
+                      <option value="Family Fun Package"></option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingDate" class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="bookingDate" required />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingPeople" class="form-label">Number of People</label>
+                    <input type="number" class="form-control" id="bookingPeople" placeholder="Enter number of people" min="1" required />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingMessage" class="form-label">Special Requests</label>
+                    <textarea class="form-control" id="bookingMessage" rows="3" placeholder="Any special requests"></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-submit w-100" data-bs-dismiss="modal">Submit Booking Request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5><i class="fas fa-plane"></i> Chalo Chale</h5>
+            <p>Your trusted travel partner for unforgettable journeys. We make travel dreams come true with personalized packages and exceptional service.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Popular Packages</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Goa Beach Escape</a></li>
+              <li><a href="#">Kerala Backwaters</a></li>
+              <li><a href="#">Rajasthan Royal Tour</a></li>
+              <li><a href="#">Himalayan Adventure</a></li>
+              <li><a href="#">Family Fun Package</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Mumbai, India</li>
+              <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+              <li><i class="fas fa-envelope me-2"></i> info@chalochale.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.2);">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">&copy; 2024 Chalo Chale. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

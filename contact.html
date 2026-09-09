@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Contact Us - Chalo Chale Travel App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <i class="fas fa-plane"></i> Chalo Chale
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="packages.html">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 mt-2 mt-lg-0">
+              <button
+                class="btn btn-auth btn-login"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-auth btn-register"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any queries or travel assistance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="contact-info">
+              <h3 class="mb-4">Contact Information</h3>
+              <div class="contact-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h5>Address</h5>
+                <p>123 Travel Street, Andheri East<br>Mumbai, Maharashtra 400069<br>India</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-phone"></i>
+                <h5>Phone</h5>
+                <p>+91 98765 43210<br>+91 98765 43211</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <h5>Email</h5>
+                <p>info@chalochale.com<br>support@chalochale.com</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-clock"></i>
+                <h5>Working Hours</h5>
+                <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+              </div>
+              <div class="mt-4">
+                <h5>Follow Us</h5>
+                <div class="footer-social mt-3">
+                  <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                  <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card border-0 shadow">
+              <div class="card-body p-4">
+                <h3 class="mb-4">Send us a Message</h3>
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="contactName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="contactName" placeholder="Enter your full name" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="contactPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="contactPhone" placeholder="Enter your phone number" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="contactSubject" class="form-label">Subject</label>
+                        <select class="form-select" id="contactSubject" required>
+                          <option value="">Select a subject</option>
+                          <option value="booking">Booking Inquiry</option>
+                          <option value="package">Package Information</option>
+                          <option value="support">Technical Support</option>
+                          <option value="feedback">Feedback</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Message</label>
+                        <textarea class="form-control" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="contactSubscribe" />
+                        <label class="form-check-label" for="contactSubscribe">
+                          Subscribe to our newsletter for travel updates and offers
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="container py-5">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Find Us on Map</h2>
+      </div>
+      <div class="card border-0 shadow">
+        <div class="card-body p-0">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8399668469!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c89f5f6b215b%3A0x0!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How do I book a travel package?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can book a travel package by browsing our packages page, selecting your preferred package, and clicking the "Book Now" button. Fill in the required details in the booking form, and our team will contact you to confirm your booking.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We accept all major credit/debit cards, net banking, UPI payments, and popular digital wallets. Payment can be made online through our secure payment gateway.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Can I customize my travel package?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! We offer customizable packages. You can contact our travel experts to modify the itinerary, add or remove destinations, change accommodation preferences, or tailor the package according to your requirements.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What is your cancellation policy?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Our cancellation policy varies depending on the package and timing of cancellation. Generally, cancellations made 30+ days before travel receive a full refund, while cancellations made closer to the travel date may incur charges. Specific terms are mentioned in each package.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Do you offer travel insurance?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we offer comprehensive travel insurance options that cover medical emergencies, trip cancellations, lost baggage, and other unforeseen circumstances. You can add travel insurance to any package during booking.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="loginModalLabel">
+              <i class="fas fa-sign-in-alt"></i> Login to Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Login</button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Don't have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Register here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="registerModalLabel">
+              <i class="fas fa-user-plus"></i> Create Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerFirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="registerFirstName" placeholder="Enter first name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="registerLastName" placeholder="Enter last name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="registerPhone" placeholder="Enter your phone number" required />
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Create password" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agreeTerms" required />
+                <label class="form-check-label" for="agreeTerms">
+                  I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Create Account</button>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Already have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Login here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5><i class="fas fa-plane"></i> Chalo Chale</h5>
+            <p>Your trusted travel partner for unforgettable journeys. We make travel dreams come true with personalized packages and exceptional service.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Popular Destinations</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Goa</a></li>
+              <li><a href="#">Kerala</a></li>
+              <li><a href="#">Rajasthan</a></li>
+              <li><a href="#">Himachal Pradesh</a></li>
+              <li><a href="#">Uttarakhand</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Mumbai, India</li>
+              <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+              <li><i class="fas fa-envelope me-2"></i> info@chalochale.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.2);">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">&copy; 2024 Chalo Chale. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

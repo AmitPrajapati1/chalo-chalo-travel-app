@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Destinations - Chalo Chale Travel App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <i class="fas fa-plane"></i> Chalo Chale
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="packages.html">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 mt-2 mt-lg-0">
+              <button
+                class="btn btn-auth btn-login"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-auth btn-register"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Explore Amazing Destinations</h1>
+            <p>Discover the most beautiful places in India and create unforgettable memories</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Box -->
+    <div class="container">
+      <div class="search-box">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Search destinations...">
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option value="">All Categories</option>
+              <option value="beach">Beach</option>
+              <option value="mountain">Mountain</option>
+              <option value="heritage">Heritage</option>
+              <option value="adventure">Adventure</option>
+              <option value="nature">Nature</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option value="">All Regions</option>
+              <option value="north">North India</option>
+              <option value="south">South India</option>
+              <option value="east">East India</option>
+              <option value="west">West India</option>
+              <option value="central">Central India</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-submit w-100">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Filter Section -->
+    <section class="container py-5" id="destinations">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="beach">Beach</button>
+          <button class="filter-btn" data-category="mountain">Mountain</button>
+          <button class="filter-btn" data-category="heritage">Heritage</button>
+          <button class="filter-btn" data-category="adventure">Adventure</button>
+          <button class="filter-btn" data-category="nature">Nature</button>
+        </div>
+      </div>
+
+      <!-- Destination Cards -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Goa -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="beach">
+            <img src="/images/lake.jpg" class="card-img-top" alt="Goa">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary">Beach</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <h5 class="card-title">Goa</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> West India</p>
+              <p class="card-text">Experience the perfect blend of sun, sand, and sea with beautiful beaches and vibrant nightlife.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹15,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kerala -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="nature">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Kerala">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-success">Nature</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <h5 class="card-title">Kerala</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> South India</p>
+              <p class="card-text">God's Own Country - experience backwaters, tea plantations, and serene beaches.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹18,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rajasthan -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="heritage">
+            <img src="/images/lake.jpg" class="card-img-top" alt="Rajasthan">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-warning text-dark">Heritage</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <h5 class="card-title">Rajasthan</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> West India</p>
+              <p class="card-text">Explore majestic forts, palaces, and the rich cultural heritage of the desert state.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹20,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Himachal Pradesh -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="mountain">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Himachal Pradesh">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-info">Mountain</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <h5 class="card-title">Himachal Pradesh</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> North India</p>
+              <p class="card-text">Discover the Himalayan paradise with stunning valleys, temples, and adventure sports.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹22,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Uttarakhand -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="adventure">
+            <img src="/images/lake.jpg" class="card-img-top" alt="Uttarakhand">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Adventure</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.6</span>
+              </div>
+              <h5 class="card-title">Uttarakhand</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> North India</p>
+              <p class="card-text">The Land of Gods - perfect for trekking, pilgrimage, and spiritual experiences.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹19,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Andaman -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="beach">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Andaman">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-primary">Beach</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <h5 class="card-title">Andaman Islands</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> East India</p>
+              <p class="card-text">Pristine beaches, coral reefs, and underwater adventures in the Bay of Bengal.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹25,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kashmir -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="nature">
+            <img src="/images/lake.jpg" class="card-img-top" alt="Kashmir">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-success">Nature</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <h5 class="card-title">Kashmir</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> North India</p>
+              <p class="card-text">Paradise on Earth with Dal Lake, Mughal gardens, and snow-capped mountains.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹28,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ladakh -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="adventure">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="Ladakh">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Adventure</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <h5 class="card-title">Ladakh</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> North India</p>
+              <p class="card-text">High-altitude desert with monasteries, Pangong Lake, and thrilling road trips.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹30,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Varanasi -->
+        <div class="col">
+          <div class="card destination-card h-100" data-category="heritage">
+            <img src="/images/lake.jpg" class="card-img-top" alt="Varanasi">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-warning text-dark">Heritage</span>
+                <span class="text-warning"><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <h5 class="card-title">Varanasi</h5>
+              <p class="card-text text-muted"><i class="fas fa-map-marker-alt"></i> North India</p>
+              <p class="card-text">Spiritual capital of India with ancient ghats, temples, and cultural richness.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">₹12,000<span class="text-muted fs-6">/person</span></span>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="loginModalLabel">
+              <i class="fas fa-sign-in-alt"></i> Login to Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" />
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Login</button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Don't have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Register here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="registerModalLabel">
+              <i class="fas fa-user-plus"></i> Create Your Account
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerFirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="registerFirstName" placeholder="Enter first name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="registerLastName" placeholder="Enter last name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required />
+              </div>
+              <div class="mb-3">
+                <label for="registerPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="registerPhone" placeholder="Enter your phone number" required />
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Create password" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm password" required />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agreeTerms" required />
+                <label class="form-check-label" for="agreeTerms">
+                  I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">Create Account</button>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Already have an account?</p>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Login here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="bookingModalLabel">
+              <i class="fas fa-calendar-check"></i> Book Your Trip
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="bookingName" placeholder="Enter your full name" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="bookingEmail" placeholder="Enter your email" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingDestination" class="form-label">Destination</label>
+                    <input class="form-control" list="datalistOptions" id="bookingDestination" placeholder="Select destination" required />
+                    <datalist id="datalistOptions">
+                      <option value="Goa"></option>
+                      <option value="Kerala"></option>
+                      <option value="Rajasthan"></option>
+                      <option value="Himachal Pradesh"></option>
+                      <option value="Uttarakhand"></option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingDate" class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="bookingDate" required />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingPeople" class="form-label">Number of People</label>
+                    <input type="number" class="form-control" id="bookingPeople" placeholder="Enter number of people" min="1" required />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingMessage" class="form-label">Special Requests</label>
+                    <textarea class="form-control" id="bookingMessage" rows="3" placeholder="Any special requests"></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-submit w-100" data-bs-dismiss="modal">Submit Booking Request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5><i class="fas fa-plane"></i> Chalo Chale</h5>
+            <p>Your trusted travel partner for unforgettable journeys. We make travel dreams come true with personalized packages and exceptional service.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Popular Destinations</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Goa</a></li>
+              <li><a href="#">Kerala</a></li>
+              <li><a href="#">Rajasthan</a></li>
+              <li><a href="#">Himachal Pradesh</a></li>
+              <li><a href="#">Uttarakhand</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Mumbai, India</li>
+              <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+              <li><i class="fas fa-envelope me-2"></i> info@chalochale.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.2);">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">&copy; 2024 Chalo Chale. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

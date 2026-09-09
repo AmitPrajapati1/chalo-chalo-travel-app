@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Chalo Chale - Travel App</title>
+
+    <style>
+      .carousel-item img {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom navbar-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-plane"></i> Chalo Chale
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#destinations">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#packages">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2 mt-2 mt-lg-0">
+              <button
+                class="btn btn-auth btn-login"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-auth btn-register"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- carrousal -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/lake.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/lake.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/landscape.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- why choose us -->
+
+    <div class="container p-5">
+      <h2 class="text-center">Why choose chalo chale??</h2>
+      <div class="row">
+        <div class="col shadow p-3 mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Easy Booking</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col shadow p-3 mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Best Hotels</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col shadow p-3 mb-5 bg-body rounded">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">24/7 Support</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular destination -->
+    <div class="container">
+      <h2 class="text-center">Popular Destinations</h2>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="card-text text-center">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="card-text text-center">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow p-3 mb-5 bg-body rounded">
+            <img src="/images/landscape.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="card-text text-center">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- featured packages -->
+    <div class="container">
+      <h2 class="text-center">Featured packages</h2>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Goa Beach package</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <p class="card-text text-success">$ 67000</p>
+              <button
+                class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Go somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Goa Beach package</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <p class="card-text text-success">$ 67000</p>
+              <button
+                class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Go somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Goa Beach package</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <p class="card-text text-success">$ 67000</p>
+              <button
+                class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Go somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-4">
+            <div class="stat-item">
+              <h3>50K+</h3>
+              <p>Happy Travelers</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="stat-item">
+              <h3>200+</h3>
+              <p>Destinations</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="stat-item">
+              <h3>500+</h3>
+              <p>Travel Packages</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="stat-item">
+              <h3>9+</h3>
+              <p>Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-card">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-3">"Amazing experience! The Goa package was perfectly planned. Everything from hotels to sightseeing was excellent. Highly recommended!"</p>
+            <div class="d-flex align-items-center">
+              <img src="/images/lake.jpg" alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0">Sneha Reddy</h6>
+                <small class="text-muted">Goa Trip</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-card">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-3">"The Kerala backwaters experience was magical. Chalo Chale took care of everything. The houseboat stay was the highlight!"</p>
+            <div class="d-flex align-items-center">
+              <img src="/images/landscape.jpg" alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0">Vikram Singh</h6>
+                <small class="text-muted">Kerala Trip</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-card">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="mb-3">"Excellent service and great value for money. The Rajasthan tour was well-organized. Will definitely book again!"</p>
+            <div class="d-flex align-items-center">
+              <img src="/images/lake.jpg" alt="Customer" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0">Anjali Mehta</h6>
+                <small class="text-muted">Rajasthan Trip</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="container py-5">
+      <div class="card border-0 shadow" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="card-body p-5 text-center text-white">
+          <h2 class="mb-3">Subscribe to Our Newsletter</h2>
+          <p class="mb-4">Get the latest travel deals, destination updates, and exclusive offers delivered to your inbox.</p>
+          <form class="row justify-content-center g-3">
+            <div class="col-md-6">
+              <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+            </div>
+            <div class="col-md-3">
+              <button type="submit" class="btn btn-light btn-lg w-100" style="color: #667eea; font-weight: 600;">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="loginModalLabel">
+              <i class="fas fa-sign-in-alt"></i> Login to Your Account
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe">
+                  Remember me
+                </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">
+                  Login
+                </button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Don't have an account?</p>
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  data-bs-dismiss="modal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#registerModal"
+                >
+                  Register here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="registerModalLabel">
+              <i class="fas fa-user-plus"></i> Create Your Account
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerFirstName" class="form-label">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="registerFirstName"
+                      placeholder="Enter first name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerLastName" class="form-label">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="registerLastName"
+                      placeholder="Enter last name"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="registerEmail"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerPhone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="registerPhone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerPassword" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="registerPassword"
+                      placeholder="Create password"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="registerConfirmPassword"
+                      placeholder="Confirm password"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="agreeTerms"
+                  required
+                />
+                <label class="form-check-label" for="agreeTerms">
+                  I agree to the <a href="#" class="text-decoration-none">Terms and Conditions</a>
+                </label>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-submit">
+                  Create Account
+                </button>
+              </div>
+              <hr />
+              <div class="text-center">
+                <p class="mb-0">Already have an account?</p>
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  data-bs-dismiss="modal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                >
+                  Login here
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header modal-header-custom">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <i class="fas fa-calendar-check"></i> Book Your Trip
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="bookingName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingEmail" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="bookingEmail"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingDestination" class="form-label">Destination</label>
+                    <input
+                      class="form-control"
+                      list="datalistOptions"
+                      id="bookingDestination"
+                      placeholder="Select destination"
+                      required
+                    />
+                    <datalist id="datalistOptions">
+                      <option value="Goa"></option>
+                      <option value="Kerala"></option>
+                      <option value="Rajasthan"></option>
+                      <option value="Himachal Pradesh"></option>
+                      <option value="Uttarakhand"></option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="bookingDate" class="form-label">Travel Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="bookingDate"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingPeople" class="form-label">Number of People</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="bookingPeople"
+                      placeholder="Enter number of people"
+                      min="1"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="bookingMessage" class="form-label">Special Requests</label>
+                    <textarea
+                      class="form-control"
+                      id="bookingMessage"
+                      rows="3"
+                      placeholder="Any special requests"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-submit w-100"
+              data-bs-dismiss="modal"
+            >
+              Submit Booking Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h5><i class="fas fa-plane"></i> Chalo Chale</h5>
+            <p>Your trusted travel partner for unforgettable journeys. We make travel dreams come true with personalized packages and exceptional service.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Popular Destinations</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Goa</a></li>
+              <li><a href="#">Kerala</a></li>
+              <li><a href="#">Rajasthan</a></li>
+              <li><a href="#">Himachal Pradesh</a></li>
+              <li><a href="#">Uttarakhand</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt me-2"></i> Mumbai, India</li>
+              <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+              <li><i class="fas fa-envelope me-2"></i> info@chalochale.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 6PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.2);">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="mb-0">&copy; 2024 Chalo Chale. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
